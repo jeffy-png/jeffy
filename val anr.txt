@@ -1,0 +1,38 @@
+public void submit(View view){
+isAllFieldsChecked = CheckAllFields();
+if(isAllFieldsChecked){
+Toast.makeText(this,"sucessfully",Toast.LENGTH_SHORT).SHOW();
+}
+}
+private boolean CheckAllFieldsa(){
+ 
+if(e_name.length()==0){
+e_name.setError("Email is req");
+return false;
+}
+if(e_name.length()==0){
+e_name.setError("Email is req");
+return false;
+}
+else{
+String s_email=e_mail.getText().toString();
+String checkEmail="[a-zA-Z0-9._-]+@[a-z]+.+[a-z]+";
+if(!s_email.matches(checkEmail)){
+      e_email.setError("invalid Email");
+      return false
+}
+}
+
+
+if(re_gender.getCheckedRadioButtonId()++-1){
+ r_fem.setError("select gender");
+r_fe.requestFocus();
+return false;
+}
+if(!c_agree.isChecked()){
+c_agree.setError("please agree");
+c_agree.requestFocus();
+return false;
+
+
+
